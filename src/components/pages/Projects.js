@@ -5,19 +5,18 @@ import Particle from "../../Particle";
 import Header from "../Header";
 import Slider from "react-slick";
 import ProjectCards from "./ProjectCards";
-import MyImg from "../KC-autoconnect 6.png";
-import Brawds from "../brawds.jpg";
-import Memo from "../memorable.jpg";
-import Luis from "../Luis-Olivares.png";
-import Future from "../Dashboard.png";
-import American from '../americanllc.jpg';
-import Recto from '../rectollc.jpg';
-import Kitchen from '../fiver-client.jpg';
-import Scrubs from '../scrub-dashboard.jpg';
-import ScrubsWeb from '../scrubs-web.jpg';
-import Krazy from '../krazy.jpg';
-import Mac from '../just-mac.jpg';
-
+import MyImg from "../../assets/KC-autoconnect 6.png";
+import Brawds from "../../assets/brawds.jpg";
+import Memo from "../../assets/memorable.jpg";
+import Luis from "../../assets/Luis-Olivares.png";
+import Future from "../../assets/Dashboard.png";
+import American from "../../assets/americanllc.jpg";
+import Recto from "../../assets/rectollc.jpg";
+import Kitchen from '../../assets/fiver-client.jpg';
+import Scrubs from '../../assets/scrub-dashboard.jpg';
+import ScrubsWeb from "../../assets/scrubs-web.jpg";
+import Krazy from "../../assets/krazy.jpg";
+import Mac from "../../assets/just-mac.jpg";
 
 function Projects() {
   const settings = {
@@ -143,22 +142,23 @@ function Projects() {
       button: "View Project",
     },
   ];
+
   return (
     <>
       <Particle />
-      <div className="container">
+      <div className="container lopppp">
         <Header />
         <div className="row mt-5">
           <Slider {...settings}>
             {ProjectCard.map((card) => (
-              <ProjectCards
-                img={card.img}
-                title={card.title}
-                content={card.content}
-                link={card.link}
-                button={card.button}
-                key={card.id}
-              />
+              <div key={card.id}>
+                <ProjectCards
+                  img={card.img}
+                  title={card.title}
+                  link={card.link}
+                  button={card.button}
+                />
+              </div>
             ))}
           </Slider>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../components/logo.png";
+import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -42,6 +42,13 @@ function Header() {
             <Link to="/Skills">
               <a class="nav-link" href="#">
                 Skills
+              </a>
+            </Link>
+          </li>
+          <li class="nav-item">
+            <Link to="/Contact">
+              <a class="nav-link" href="#">
+                Contact Me
               </a>
             </Link>
           </li>

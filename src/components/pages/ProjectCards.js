@@ -1,26 +1,45 @@
 /* eslint-disable react/jsx-no-undef */
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { AiFillGithub } from "react-icons/ai"; 
+
+
 function ProjectCards(props) {
+  const [showText, setShowText] = useState(false);
+
   return (
-    <>
-      <div className="">
-        <Card className="mx-3">
-          <div
-            className="card-img-wrapper"
-            style={{ height: "300px" , overflowY: "hidden" }}
-          >
-            <Card.Img variant="top" className="img-fluid" src={props.img} />
+    <div className="project-card-container">
+      <Card className="project-card mx-3 border-2 border-gradient p-3 rounded-3 bg-white">
+        <div
+          className="card-img-wrapper"
+          style={{ height: "300px", overflowY: "hidden" }}
+        >
+          <Card.Img
+            variant="top"
+            className="img-fluid rounded-3"
+            src={props.img}
+          />
+        </div>
+        <Card.Body>
+          <Card.Title>{props.title}</Card.Title>
+          <Card.Text>{props.content}</Card.Text>
+          <div className="card-link-container">
+            <a
+              href={props.link}
+              target="_blank"
+              rel="noreferrer"
+              onMouseEnter={() => setShowText(true)}
+              onMouseLeave={() => setShowText(false)}
+              className="github-link"
+            >
+              <AiFillGithub size={24} />
+            </a>
+            {showText && <span className="view-project-text">View Project</span>}
           </div>
-          <Card.Body>
-            <Card.Title>{props.title}</Card.Title>
-            <Card.Text>{props.content}</Card.Text>
-            <a href={props.link} target="_blank" rel="noreferrer">{props.button}</a>
-          </Card.Body>
-        </Card>
-      </div>
-    </>
+        </Card.Body>
+      </Card>
+    </div>
   );
 }
 

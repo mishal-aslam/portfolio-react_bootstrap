@@ -4,13 +4,42 @@ canvas {
   background-color: #000000 !important;
   z-index: 1 !important;
 }
-.my-img{
+
+
+
+.myImg{
   position: relative;
   z-index: 2;
-  width: 100%;
-  border-radius: 50%;
-  max-width: 18rem;
+  width: 190%;
+  height: 500px;
+  margin-top: 10px;
+  right: 30px;
 }
+.bannerText1{
+  color: rgb(218, 165, 32);
+  font-size: large;
+  font-weight: 700;
+  margin-top: 120px;
+  
+}
+.bannerText2{
+  font-size: 55px;
+  font-weight: 900;
+  margin-top: 20px;
+  font-size: bold;
+}
+.bannerText2 span {
+  color: rgb(218, 165, 32);
+
+}
+.col-md-6{
+    margin-top: -120px;  
+}
+
+  .myImg{
+    margin-top: 10px;
+  }
+ 
 
 /* ---- particles.js container ---- */
 
@@ -64,6 +93,7 @@ canvas {
   position: relative;
   z-index: 2;
   color: #fff;
+  padding: 20px;
 }
 a{
   text-decoration: none;
@@ -80,27 +110,90 @@ ul li a{
 .font{
   font-family: 'Poppins', sans-serif !important;
   font-size: 2rem !important;
-  font-weight: 600 !important;
-  color: #ef1385;
+  font-weight: 900 !important;
+  /* color: #ef1385; */
+  
 }
 .article{
   background-color: #ffffff42;
   border-radius: 10px;
   text-align: justify;
 }
-.skills-Card{
+.skills-Card {
   background-color: #ffffff42;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-.skills-img{
+.skills-Card:hover {
+  transform: translateY(-5px);
+}
+
+.skills-img {
   width: 100%;
   max-width: 150px;
+  height: auto;
 }
+
+.progress {
+  height: 25px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background: rgb(56, 53, 53);
+
+}
+
+.progress-bar {
+  background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+  border-radius: 10px;
+  color: black;
+  font-size: 15px;
+  animation: animate-progress 2s ease-out forwards;
+}
+
+@keyframes animate-progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progress-width, 0%);
+  }
+}
+
+
+
+.percent-text {
+  border-radius: 10px;
+  background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: bold;
+}
+
+.card {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+.skills-Card hr {
+  display: none;
+}
+
+
+.card {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+
+.card {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
 .card{
   background-color: transparent !important;
   color: #fff !important;
@@ -109,24 +202,95 @@ img.card-img-top.img-fluid{
   height: 290px !important;
 }
 .percent-text, .contact-h{
-  background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #eedd44);
+  background: rgb(218, 165, 32);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled){
-  background: linear-gradient(to right, #f32170, #f32170,#f32170, #ff6b08) !important;
+  /* background: rgb(218, 165, 32) !important; */
 }
 
 
-
-
-
+.logo-img{
+  max-width: 180px;
+}
 
 @media (max-width:768px) {
   .text-area{
     text-align: center;
   }
   .logo-img{
-    max-width: 200px;
+    max-width: 120px;
   }
+}
+
+.border-gradient {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(
+    to right,
+    #f32170,
+    #ff6b08,
+    #cf23cf,
+    #eedd44
+  );
+}
+
+
+.project-card-container {
+  margin-bottom: 20px; 
+}
+
+.project-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+
+.card-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.github-link {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease-in-out;
+}
+
+.github-link:hover {
+  color: #f32170;
+}
+
+.view-project-text {
+  font-size: 14px;
+  font-weight: bold;
+  background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.view-project-text:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+.glass-effect {
+  background: black4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(40px);
+  padding: 20px;
 }
