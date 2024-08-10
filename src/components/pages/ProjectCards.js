@@ -2,15 +2,21 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { AiFillGithub } from "react-icons/ai"; 
-
+import { AiFillGithub } from "react-icons/ai";
 
 function ProjectCards(props) {
   const [showText, setShowText] = useState(false);
 
   return (
     <div className="project-card-container">
-      <Card className="project-card mx-3 border-2 border-gradient p-3 rounded-3 bg-white">
+      <Card
+        className="project-card mx-3 border-2 border-gradient p-3 rounded-3 bg-white"
+        style={{ position: "relative" }}
+      >
+        <span className="top"></span>
+        <span className="bottom"></span>
+        <span className="right"></span>
+        <span className="leftt"></span>
         <div
           className="card-img-wrapper"
           style={{ height: "300px", overflowY: "hidden" }}
