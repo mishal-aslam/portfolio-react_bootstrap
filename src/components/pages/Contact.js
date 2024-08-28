@@ -23,13 +23,13 @@ const Contact = () => {
                     <span>Project. </span> */}
                   </div>
                   <div class="app-create">Let's create something together</div>
-                  <div class="app-contact">
+                  <div class="app-contact ">
                     <span class="icon-contact"><LiaPhoneVolumeSolid /></span>
                    +92 319 3865337
                   </div>
                   <div class="app-contact">
                     <span class="icon-contact"><MdEmail  /></span>
-                   mishalaslam17@gmail.com
+                    shariikhan925@gmail.com
                   </div>
                 </div>
                 <div class="screen-body-item">

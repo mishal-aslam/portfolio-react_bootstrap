@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import Particle from "../../Particle";
 import BannerImg from "../../components/pages/BannerImg";
 import shaheerImg from "../../assets/Layer-1.png";
+import Resume from '../../assets/updated-resume.pdf'
 
 function AboutMe() {
   return (
@@ -35,29 +36,31 @@ function AboutMe() {
                 a versatile and accomplished front-end developer."
               </p>
               <h2 className="mt-6 fs-5 fw-bold">
-                <span className="text-white label">Name:</span>
-                <span className=" text-gray-500 fw-light fs-5 value">
+                <span className="text-white label ">Name:</span>
+                <span className=" text-gray-500 fw-light fs-5 value px-4 ">
                   Muhammad Shaher
                 </span>
               </h2>
 
               <h2 className="mt-2 fs-6 fw-bold">
                 <span className="text-white label">Contact:</span>
-                <span className=" text-gray-500 fw-light fs-5 value">
+                <span className=" text-gray-500 fw-light fs-5 value px-4 ">
                   0319-3865337
                 </span>
               </h2>
 
               <h2 className="mt-2 fs-6 fw-bold">
                 <span className="text-white label">E-Mail:</span>
-                <span className=" text-gray-500 fw-light fs-5 value">
+                <span className=" text-gray-500 fw-light fs-5 value px-4 ">
                   shariikhan925@gmail.com
                 </span>
               </h2>
+<a href={Resume} download={Resume}>
 
               <div className="app-form-group mt-4 mr-2">
                 <button className="app-form-button2">Download CV</button>
               </div>
+</a>
             </div>
           </div>
         </div>

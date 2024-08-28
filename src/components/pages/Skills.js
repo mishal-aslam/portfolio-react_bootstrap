@@ -27,7 +27,7 @@ function Skills() {
         <Header />
         <div className="main-title">
           <h1>My Skills</h1>
-          <p>
+          <p className="fs-6">
           I'm passionate about developing innovative solutions and continually improving my skills.
 
           </p>
